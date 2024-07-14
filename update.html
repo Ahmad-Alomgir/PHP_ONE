@@ -5,24 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Info</title>
     <style>
-        body{
-            background-color:antiquewhite;
-            display: grid;
-            text-decoration:none;
-            text-align: center;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        body {
+            background-color: #f8f1e7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #5c85d6;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #466bbf;
         }
     </style>
 </head>
 <body>
-    <h2>Update Info</h2>
-    <form action="update.php" method="post">
-        <label for="username">New Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">New Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <button type="submit">Update</button>
-    </form>
+    <div class="container">
+        <h2>Update Info</h2>
+        <form action="update.php" method="post">
+            <label for="username">New Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">New Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Update</button>
+        </form>
+    </div>
 </body>
 </html>
